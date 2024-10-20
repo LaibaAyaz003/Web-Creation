@@ -1,0 +1,84 @@
+<html><head>
+    <title>Laiba Ayaz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const posts = document.querySelectorAll(".post");
+            let currentPostIndex = 0;
+
+            function showPost(index) {
+                posts.forEach((post) => (post.style.display = "none"));
+                posts[index].style.display = "block";
+            }
+
+            showPost(currentPostIndex);
+
+            document.getElementById("prev-button").addEventListener("click", function () {
+                currentPostIndex = (currentPostIndex - 1 + posts.length) % posts.length;
+                showPost(currentPostIndex);
+            });
+
+            document.getElementById("next-button").addEventListener("click", function () {
+                currentPostIndex = (currentPostIndex + 1) % posts.length;
+                showPost(currentPostIndex);
+            });
+        });
+    </script>
+</head>
+<body style="background-color: #fce4ec; color: #880e4f;">
+    <div class="header" style="background-color: #f8bbd0;">
+        <a href="index.html" class="logo" style="color: #ad1457;">Laiba Ayaz</a>
+        <div class="navbar">
+            <a class="active" href="#" style="color: #ad1457;">Projects</a>
+            <a href="portfolio.html" style="color: #880e4f;">Portfolio</a>
+            <a href="contact.html" style="color: #880e4f;">Contact</a>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="d-flex justify-content-center" style="margin-top: 250px;">
+            <div class="projects">
+                <div class="post-container">
+                    <div class="post" id="post-1" style="display: block;">
+                        <div class="row">
+                            <div class="col-md" id="post-img">
+                                <img class="img-fluid" src="Website.jpg" alt="Fashion Website">
+                            </div>
+                            <div class="col-md" style="padding-top:25px">
+                                <h1>Chic Couture: Fashion E-Commerce Website</h1>
+                                <p>
+                                    I developed **Chic Couture**, a vibrant and user-friendly e-commerce platform designed for fashion boutiques. The website features a sleek interface, 
+                                    with dynamic product pages, and integrated shopping cart functionality. I focused on responsive design, ensuring the site looks fabulous across devices.
+                                    With smooth transitions and pastel-colored aesthetics, it gives users a seamless, enjoyable shopping experience. This project challenged me to merge 
+                                    style with functionality and taught me the intricacies of front-end and back-end integration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post" id="post-2" style="display: none;">
+                        <div class="row">
+                            <div class="col-md" id="post-img">
+                                <img class="img-fluid" src="Blossom.webp" alt="Wellness App">
+                            </div>
+                            <div class="col-md" style="padding-top:25px">
+                                <h1>Blossom: Wellness &amp; Self-Care App</h1>
+                                <p>
+                                    **Blossom** is a self-care mobile app designed to help users track their mental and physical wellness. It includes features such as daily mood tracking, 
+                                    goal setting, and personalized self-care suggestions. I designed the app with a soft color palette and a calming UI to provide a relaxing user experience. 
+                                    Working on Blossom helped me enhance my mobile app development skills, with a focus on user experience, API integration, and data security.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button id="prev-button" style="float: left; background-color: #ad1457; color: #fff;">←</button>
+                    <button id="next-button" style="float: right; background-color: #ad1457; color: #fff;">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>

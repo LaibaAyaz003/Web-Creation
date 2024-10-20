@@ -1,0 +1,198 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+.main-container {
+    min-height: 100vh; /* Minimum height to fill viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #880e4f; /* Dark Pink */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ad1457; /* Darker Pink on hover */
+}
+
+/* Section Styles */
+.section1, .section2 {
+    min-height: 100vh; /* Ensure sections fill the viewport */
+    overflow: hidden; /* Prevent overflow issues */
+    background-attachment: fixed; /* Fixed background for sections */
+}
+
+/* Text Styles */
+h1 {
+    color: #880e4f; /* Dark Pink */
+}
+
+p {
+    color: #880e4f; /* Dark Pink */
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    background-color: #f8bbd0; /* Light Pink */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    color: #ad1457; /* Darker Pink */
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.header .navbar {
+    overflow: hidden;
+    float: right;
+}
+
+.header .navbar a {
+    color: #880e4f; /* Dark Pink */
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.header .navbar a:hover {
+    color: #ff4081; /* Light Pink on hover */
+}
+
+/* Active Link Styles */
+.active {
+    color: black !important;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+/* Button Styles */
+.button-white {
+    color: #880e4f; /* Dark Pink text */
+    background-color: white; /* White background */
+    text-decoration: none;
+    font-size: 20px; /* Font size */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #880e4f; /* Add a border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button-white:hover {
+    background-color: #f8bbd0; /* Light Pink on hover */
+    color: #880e4f; /* Dark Pink text */
+}
+
+.button-black {
+    color: white;
+    background-color: #880e4f !important; /* Dark Pink */
+    text-decoration: none;
+    font-size: 20px; /* Adjusted for better readability */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px; /* More rounded */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button-black:hover {
+    background-color: #ad1457; /* Darker Pink on hover */
+}
+
+/* Input and Textarea Styles */
+input {
+    background-color: rgb(255, 240, 245); /* Light Pink */
+    color: #880e4f; /* Dark Pink */
+    width: 100%; /* Full width for responsiveness */
+    height: 40px;
+    margin: 10px 0;
+    padding: 0px 10px;
+    border-style: groove;
+    border-radius: 12px;
+}
+
+textarea {
+    background-color: rgb(255, 240, 245); /* Light Pink */
+    color: #880e4f; /* Dark Pink */
+    width: 100%; /* Full width for responsiveness */
+    height: 150px;
+    padding: 0px 10px;
+    border-radius: 12px;
+}
+
+/* Project Styles */
+.projects {
+    background-color: rgba(255, 240, 245, 0.8); /* Semi-transparent light pink */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Post Container Styles */
+.post-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.post {
+    display: none;
+}
+
+/* Navigation Styles */
+.navigation {
+    text-align: center;
+}
+
+#post-img {
+    max-width: 350px;
+}
+
+#prev-button, #next-button {
+    background-color: transparent;
+    border: none;
+    color: #880e4f; /* Dark Pink */
+    font-size: 50px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+/* Profile Image Styles */
+.profile-image {
+    border-radius: 10px; 
+    border: 5px solid #ad1457; 
+    width: 50%; 
+    height: auto; 
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 900px) {
+    #myimage {
+        display: none;
+    }
+
+    .post-container {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0 10px; /* Add padding for mobile */
+    }
+
+    input, textarea {
+        width: calc(100% - 20px); /* Responsive width for mobile */
+    }
+}
